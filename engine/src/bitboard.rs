@@ -13,7 +13,7 @@
  */
 
 
- /// A `Bitboard` represents a chessboard using a 64-bit integer.
+/// A `Bitboard` represents a chessboard using a 64-bit integer.
 /// Each bit corresponds to a square on the chessboard:
 /// Bit 0 represents A1, Bit 63 represents H8.
 
