@@ -28,7 +28,7 @@ const WelcomePage = () => {
   };
 
   return (
-    <div className="home-page">
+    <div className="welcome-page">
 
       {/* Header Section */}
       <Header visible={visibleSections.header} />
