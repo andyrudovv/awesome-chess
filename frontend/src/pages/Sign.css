@@ -1,64 +1,94 @@
-.sign-container {
+html, body {
+    height: 100%; /* Ensure body and html take up full height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Hide scrollbars */
+  }
+
+/* Parent container for the page */
+.sign-page {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow-x: hidden; /* Prevent scroll if content exceeds viewport */
+  }
+  
+
+  
+  /* Main container for form */
+  .sign-container {
+    position: relative; /* Ensure it stacks above the background */
     max-width: 400px;
-    margin: 0 auto;
     padding: 20px;
     text-align: center;
-}
-
-.sign-container h2 {
+    z-index: 1; /* Ensure it is above the background */
+    background: transparent; /* Fully transparent background */
+    color: #fff; /* Ensure text is visible against the particles background */
+  }
+  
+  .sign-container h2 {
     margin-bottom: 20px;
-}
-
-.sign-container form {
+  }
+  
+  .sign-container form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-}
-
-.sign-container input {
+  }
+  
+  .sign-container input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-.sign-container button {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent input background */
+    color: #fff; /* White text for visibility */
+  }
+  
+  .sign-container input::placeholder {
+    color: #ccc; /* Light placeholder text for contrast */
+  }
+  
+  .sign-container button {
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent button background */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.sign-container button:hover {
-    background-color: #45a049;
-}
-
-.auth-options {
+  }
+  
+  .sign-container button:hover {
+    background-color: rgba(69, 160, 73, 0.9); /* Slightly darker on hover */
+  }
+  
+  .auth-options {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
-}
-
-.auth-options button {
+  }
+  
+  .auth-options button {
     display: flex;
     align-items: center;
     gap: 5px;
     padding: 10px;
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
+    background-color: rgba(240, 240, 240, 0.2); /* Semi-transparent buttons */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 4px;
     cursor: pointer;
-}
-
-.auth-options button:hover {
-    background-color: #e0e0e0;
-}
-
-.sign-container p span {
-    color: #4CAF50;
+  }
+  
+  .auth-options button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly brighter on hover */
+  }
+  
+  .sign-container p span {
+    color: #4caf50;
     cursor: pointer;
-}
+  }
+  
