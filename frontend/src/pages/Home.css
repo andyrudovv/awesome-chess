@@ -1,13 +1,68 @@
 .home-page {
     display: flex;
     color: white;
-
-
-    position: relative; /* Ensure it stacks above the background */
-    z-index: 1; /* Ensure it is above the background */
+    position: relative;
+    z-index: 1;
     margin: 0;
     padding: 0;
     left: 0;
     top: 0;
+    height: 100vh;
+}
 
+.sidebar-container {
+    position: relative;
+    height: 100vh;
+}
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.216);
+    padding: 10px;
+    width: 60px; /* Reduced width since we're only showing icons */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.sidebar-top, .sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-bottom {
+    padding-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    padding: 15px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar li:hover, .sidebar li.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar svg {
+    font-size: 1.5em; /* Increase icon size */
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chess-board {
+    width: 80%;
+    max-width: 600px;
 }

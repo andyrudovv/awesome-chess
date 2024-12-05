@@ -6,6 +6,7 @@ import SignInPage from './pages/Sign'
 import HomePage from './pages/Home'
 import MoleculesBackground from './MoleculesBackground'
 
+
 function App() {
   return (
     <div>
@@ -18,7 +19,6 @@ function App() {
             <Route path="/home" element={<HomePage />} />
           </Routes>
         </div>
-        
       </BrowserRouter>
     </div>
   )

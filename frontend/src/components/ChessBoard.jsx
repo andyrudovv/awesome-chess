@@ -1,10 +1,10 @@
-import React from 'react';
-import { Chessboard } from 'react-chessboard';
+import React from "react";
+import { Chessboard } from "react-chessboard";
 
 const ChessBoard = () => {
   return (
-    <div className="chess-board-container" style={{height:'500px', width:'500px'}}>
-      <Chessboard />
+    <div className="chess-board">
+      <Chessboard id="BasicBoard" />
     </div>
   );
 };
