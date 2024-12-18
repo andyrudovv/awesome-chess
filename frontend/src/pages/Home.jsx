@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { FaHome, FaChess, FaUser, FaCog } from "react-icons/fa";
-import ChessBoard from "../components/ChessBoard";
 import "./Home.css";
+import Sidebar from "../components/Sidebar";
+import Board from "../components/Board/Board";
 
 const HomePage = () => {
   const [activeNav, setActiveNav] = useState("home");
@@ -9,16 +9,6 @@ const HomePage = () => {
     engine: "Stockfish",
     depth: 10,
   });
-
-  const topNavItems = [
-    { icon: <FaHome />, key: "home" },
-    { icon: <FaChess />, key: "play" },
-  ];
-
-  const bottomNavItems = [
-    { icon: <FaUser />, key: "profile" },
-    { icon: <FaCog />, key: "settings" },
-  ];
 
   const handleSettingsChange = (e) => {
     const { name, value } = e.target;
@@ -28,27 +18,9 @@ const HomePage = () => {
     }));
   };
 
-  const renderNavItems = (items) =>
-    items.map((item) => (
-      <li
-        key={item.key}
-        className={activeNav === item.key ? "active" : ""}
-        onClick={() => setActiveNav(item.key)}
-      >
-        {item.icon}
-      </li>
-    ));
-
   return (
     <div className="home-page">
-      <nav className="sidebar">
-        <div className="sidebar-top">
-          <ul>{renderNavItems(topNavItems)}</ul>
-        </div>
-        <div className="sidebar-bottom">
-          <ul>{renderNavItems(bottomNavItems)}</ul>
-        </div>
-      </nav>
+      <Sidebar activeNav={activeNav} setActiveNav={setActiveNav} />
       <div className="main-content">
         {/* Settings Section */}
         <div className="settings-field">
@@ -76,7 +48,9 @@ const HomePage = () => {
             />
           </label>
         </div>
-        <ChessBoard />
+        
+        {/* Chessboard Section */}
+        <Board />
       </div>
     </div>
   );
